@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:300,900");
 @import url("fontawesome-all.min.css");
 html,
 body,
@@ -152,7 +152,7 @@ textarea {
 }
 
 /*
-	Aerial by HTML5 UP
+	Based on Aerial by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -189,7 +189,7 @@ input,
 select,
 textarea {
   color: white;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 15pt;
   font-weight: 300 !important;
   letter-spacing: -0.025em;
@@ -520,13 +520,13 @@ a:hover {
   background-color: white;
 }
 #header h1 {
-  font-size: 4.35em;
+  font-size: 4.15em;
   font-weight: 900;
   letter-spacing: -0.035em;
   line-height: 1em;
 }
 #header p {
-  font-size: 1.25em;
+  font-size: 1.15em;
   margin: 0.75em 0 0.25em 0;
   opacity: 0.75;
 }
@@ -662,7 +662,6 @@ a:hover {
   background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
   background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
   bottom: 0;
-  cursor: default;
   height: 6em;
   left: 0;
   line-height: 8em;

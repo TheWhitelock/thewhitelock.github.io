@@ -3,56 +3,33 @@
 @import "libs/mixins";
 @import "libs/vendor";
 @import "libs/breakpoints";
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:300,900");
 @import url("fontawesome-all.min.css");
 @import "reset.scss";
 
 /*
-	Aerial by HTML5 UP
+	Based on Aerial by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 // Breakpoints.
 
-@include breakpoints(
-    (
-        wide: (
-            1281px,
+@include breakpoints((wide: (1281px,
             1680px,
         ),
-        normal: (
-            737px,
+        normal: (737px,
             1280px,
         ),
-        mobile: (
-            481px,
+        mobile: (481px,
             736px,
         ),
-        mobileportrait: (
-            null,
+        mobileportrait: (null,
             480px,
         ),
-    )
-);
+    ));
 
 // Mixins.
-
-// @mixin bg($width) {
-//     @include keyframes("bg") {
-//         0% {
-//             @include vendor("transform", "translate3d(0,0,0)");
-//         }
-//         100% {
-//             @include vendor("transform", "translate3d(#{$width * -1},0,0)");
-//         }
-//     }
-
-//     #bg {
-//         background-size: $width auto;
-//         width: ($width * 3);
-//     }
-// }
 
 $delay-wrapper: _duration(wrapper) - 1s;
 $delay-overlay: $delay-wrapper - 0.5s;
@@ -80,6 +57,7 @@ body {
 
     // Stops initial animations until page loads.
     &.is-preload {
+
         *,
         *:before,
         *:after {
@@ -94,7 +72,7 @@ input,
 select,
 textarea {
     color: _palette(fg);
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 15pt;
     font-weight: 300 !important;
     letter-spacing: -0.025em;
@@ -119,7 +97,7 @@ a {
     @include icon;
     position: relative;
 
-    > .label {
+    >.label {
         display: none;
     }
 
@@ -142,6 +120,7 @@ a {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -160,15 +139,12 @@ a {
 /* BG */
 
 #bg {
-    // @include vendor("animation", "bg #{_duration(bg)} linear infinite");
-    // @include vendor("backface-visibility", "hidden");
-    // @include vendor("transform", "translate3d(0,0,0)");
 
     /* Set your background with this */
     background: $primary url("images/bg.jpg");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
     height: 100%;
     width: 100%;
@@ -184,14 +160,14 @@ a {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
 #overlay {
-    @include vendor(
-        "animation",
+    @include vendor("animation",
         "overlay #{_duration(overlay)} #{$delay-overlay} forwards"
     );
     background-attachment: fixed, fixed;
@@ -235,6 +211,7 @@ a {
         @include vendor("transform", "translate3d(0,1em,0)");
         opacity: 0;
     }
+
     100% {
         @include vendor("transform", "translate3d(0,0,0)");
         opacity: 1;
@@ -246,6 +223,7 @@ a {
         @include vendor("transform", "translate3d(0,1em,0)");
         opacity: 0;
     }
+
     100% {
         @include vendor("transform", "translate3d(0,0,0)");
         opacity: 1;
@@ -253,8 +231,7 @@ a {
 }
 
 #header {
-    @include vendor(
-        "animation",
+    @include vendor("animation",
         "header #{_duration(header)} #{$delay-header} forwards"
     );
     @include vendor("backface-visibility", "hidden");
@@ -267,20 +244,20 @@ a {
     vertical-align: middle;
     width: 90%;
 
-	::selection {
-		color: _palette(bg);
-		background-color: _palette(fg);
-	}
+    ::selection {
+        color: _palette(bg);
+        background-color: _palette(fg);
+    }
 
     h1 {
-        font-size: 4.35em;
+        font-size: 4.15em;
         font-weight: 900;
         letter-spacing: -0.035em;
         line-height: 1em;
     }
 
     p {
-        font-size: 1.25em;
+        font-size: 1.15em;
         margin: 0.75em 0 0.25em 0;
         opacity: 0.75;
     }
@@ -289,8 +266,7 @@ a {
         margin: 1.5em 0 0 0;
 
         li {
-            @include vendor(
-                "animation",
+            @include vendor("animation",
                 "nav-icons #{_duration(nav-icons)} ease-in-out forwards"
             );
             @include vendor("backface-visibility", "hidden");
@@ -305,8 +281,7 @@ a {
 
             @for $x from 1 through 10 {
                 &:nth-child(#{$x}) {
-                    @include vendor(
-                        "animation-delay",
+                    @include vendor("animation-delay",
                         ($delay-nav-icons + ($x * $delay-nav-icon)) + ""
                     );
                 }
@@ -337,7 +312,7 @@ a {
                 font-size: 1.1em;
 
                 &:before {
-					background-color: _palette(nav-icon, hover-bg);
+                    background-color: _palette(nav-icon, hover-bg);
                     color: _palette(nav-icon, hover-fg);
                 }
             }
@@ -362,12 +337,10 @@ a {
 /* Footer */
 
 #footer {
-    @include vendor(
-        "background-image",
+    @include vendor("background-image",
         "linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%)"
     );
     bottom: 0;
-    cursor: default;
     height: 6em;
     left: 0;
     line-height: 8em;
@@ -379,6 +352,7 @@ a {
 // /* Wide */
 
 @include breakpoint("<=wide") {
+
     body,
     input,
     select,
@@ -392,6 +366,7 @@ a {
 /* Normal */
 
 @include breakpoint("<=normal") {
+
     body,
     input,
     select,
