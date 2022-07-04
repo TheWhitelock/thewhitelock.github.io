@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Sass",
+            "type": "npm",
+            "script": "sass",
+            "problemMatcher": [],
+            "group": "build",
+            "presentation": {
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true,
+                "close": true,
+                "group": "live"
+            },
+        },
+        {
+            "label": "Sass-watch",
+            "type": "npm",
+            "script": "sass-watch",
+            "problemMatcher": [],
+            "group": "build",
+            "presentation": {
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true,
+                "close": true,
+                "group": "live"
+            },
+        }
+    ]
+}
